@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroDoc - One Stop Solution To Increase Crops Yields</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <!-- Favicon -->
+     <link href="img/favicon.ico" rel="icon">
+
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+ 
+     <!-- Icon Font Stylesheet -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+ 
+     <!-- Libraries Stylesheet -->
+     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+ 
+     <!-- Customized Bootstrap Stylesheet -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+     <!-- Template Stylesheet -->
+     <link href="css/style.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  
+      <!-- Topbar Start -->
+      <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5 py-3 align-items-center">
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-start">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                    <h2 class="mb-0">+012 345 6789</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="index.html" class="navbar-brand ms-lg-5">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Agro</span>Doc</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none">
+            <h1 class="m-0 display-4 text-secondary"><span class="text-white">Agro</span>Doc</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="/index.html" class="nav-item nav-link active">Home</a>
+               
+              <!--  <a href="service.html" class="nav-item nav-link">Service</a>  -->
+              
+              
+                       
+                       
+       
+                <a href="/contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <h1>Plant Disease Classifier 🍀</h1>
+    
+    <hr>
+
+
+    <div class="upload-btn-wrapper">
+        <button class="btn upload-file font-weight-500">
+            <span class="upload-btn">
+                <i class="material-icons d-block font-50 pb-2">cloud_upload</i>
+                <p id="choose-text-1">Choose Image of Crop leaf</p>
+            </span>
+            <span class="upload-select-button" id="blankFile-1">
+                *Supports .png, .jpg, .jpeg, .jfif
+            </span>
+            <span class="success-1">
+                <i class="material-icons text-success">check</i>
+            </span>
+        </button>
+        <input type="file" name="uploadImage" id="uploadImage">
+    </div>
+
+   
+
+    <div class="row">
+        <div class="box">
+            <img src="" alt="" id="image" width="224" height="224">
+        </div>
+
+        <div class="box box-result">
+            <div class="init_status"></div>
+            <div>
+                <h2>RESULT :- <span class="pred_class"></span></h2>
+                
+            </div>
+            <div class="accuracy">
+                <div class="progress" id="progress">
+                    <div class="inner">
+                      
+                    </div>
+                  </div>
+
+            </div>
+            <p style="padding : 10px;"> CONFIDENCE : <b><span class="confidence"></span></b> %</p>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/2.0.1/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
